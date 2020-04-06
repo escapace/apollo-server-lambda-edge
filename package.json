@@ -1,0 +1,95 @@
+{
+  "name": "apollo-server-lambda-edge",
+  "description": "",
+  "version": "0.0.0",
+  "author": "escapace <opensource@escapace.com>",
+  "bugs": "https://github.com/escapace/apollo-server-lambda-edge/issues",
+  "dependencies": {
+    "@apollographql/graphql-playground-html": "^1.6.24",
+    "@types/aws-lambda": "^8.10.47",
+    "@types/bunyan": "^1.8.6",
+    "@types/lodash": "^4.14.149",
+    "@types/lru-cache": "^5.1.0",
+    "apollo-server-caching": "^0.5.1",
+    "apollo-server-core": "^2.11.0",
+    "apollo-server-env": "^2.4.3",
+    "bunyan": "^1.8.12",
+    "graphql-tools": "^4.0.7",
+    "lodash": "^4.17.15",
+    "lru-cache": "^5.1.1",
+    "object-sizeof": "^1.6.0",
+    "tslib": "^1.11.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "8.3.5",
+    "@commitlint/config-conventional": "8.3.4",
+    "@types/chai": "4.2.11",
+    "@types/mocha": "7.0.2",
+    "@types/node": "^13.11.0",
+    "@typescript-eslint/eslint-plugin": "2.26.0",
+    "@typescript-eslint/parser": "2.26.0",
+    "chai": "4.2.0",
+    "codecov": "3.6.5",
+    "eslint": "6.8.0",
+    "eslint-config-escapace": "3.0.2",
+    "eslint-config-prettier": "6.10.1",
+    "eslint-config-standard-with-typescript": "15.0.1",
+    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-jsdoc": "22.1.0",
+    "eslint-plugin-no-null": "1.0.2",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "3.1.2",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1",
+    "husky": "4.2.3",
+    "lint-staged": "10.1.2",
+    "prettier": "2.0.4",
+    "semantic-release": "17.0.4",
+    "syncpack": "5.0.1",
+    "typescript": "3.8.3"
+  },
+  "engines": {
+    "node": ">=10.16.0"
+  },
+  "files": [
+    "lib"
+  ],
+  "homepage": "https://github.com/escapace/apollo-server-lambda-edge",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged && npm run typecheck && npm run test"
+    }
+  },
+  "keywords": [
+    "TypeScript"
+  ],
+  "license": "MPL-2.0",
+  "lint-staged": {
+    "package.json": [
+      "syncpack-format --source",
+      "syncpack-set-semver-ranges --dev --source"
+    ],
+    "{src,examples,perf}/**/*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "{src,examples,perf}/**/*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "escapace/apollo-server-lambda-edge",
+  "scripts": {
+    "build": "npx recce build -m cjs -e src/index.ts",
+    "lint": "eslint 'src/**/*.ts'",
+    "typecheck": "tsc --noEmit"
+  },
+  "typings": "lib/types/index.d.ts"
+}
