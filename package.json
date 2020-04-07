@@ -96,7 +96,7 @@
   "repository": "escapace/apollo-server-lambda-edge",
   "scripts": {
     "build": "npx recce build -m cjs -e src/index.ts",
-    "test": " npx recce test --node 'src/**.spec.ts' --reporter=text",
+    "test": " npx recce test --node 'src/**.spec.ts' --reporter=text --reporter lcov",
     "lint": "ls-lint && eslint 'src/**/*.ts'",
     "typecheck": "tsc --noEmit"
   },
