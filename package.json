@@ -23,11 +23,16 @@
   "devDependencies": {
     "@commitlint/cli": "8.3.5",
     "@commitlint/config-conventional": "8.3.4",
+    "@ls-lint/ls-lint": "^1.8.0",
     "@types/chai": "4.2.11",
-    "@types/mocha": "7.0.2",
+    "@types/mocha": "^7.0.2",
     "@types/node": "^13.11.0",
+    "@types/sinon": "^9.0.0",
+    "@types/superagent": "^4.1.7",
+    "@types/supertest": "^2.0.8",
     "@typescript-eslint/eslint-plugin": "2.27.0",
     "@typescript-eslint/parser": "2.27.0",
+    "apollo-link-persisted-queries": "^0.2.2",
     "chai": "4.2.0",
     "codecov": "3.6.5",
     "eslint": "6.8.0",
@@ -42,9 +47,12 @@
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-standard": "4.0.1",
     "husky": "4.2.3",
+    "js-sha256": "^0.9.0",
     "lint-staged": "10.1.2",
     "prettier": "2.0.4",
     "semantic-release": "17.0.4",
+    "sinon": "^9.0.1",
+    "supertest": "^4.0.2",
     "syncpack": "5.0.1",
     "typescript": "3.8.3"
   },
@@ -88,8 +96,8 @@
   "repository": "escapace/apollo-server-lambda-edge",
   "scripts": {
     "build": "npx recce build -m cjs -e src/index.ts",
-    "test": "echo 'No tests yet'",
-    "lint": "eslint 'src/**/*.ts'",
+    "test": " npx recce test --node 'src/**.spec.ts' --reporter=text",
+    "lint": "ls-lint && eslint 'src/**/*.ts'",
     "typecheck": "tsc --noEmit"
   },
   "typings": "lib/types/index.d.ts"

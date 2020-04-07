@@ -273,6 +273,16 @@ export class ApolloServer extends ApolloServerBase {
         }
       }
 
+      if (url.pathname !== this.endpoints.graphql) {
+        return callback(null, {
+          status: '404',
+          statusDescription: 'Not Found',
+          headers: cloudFrontHeaders({
+            ...requestCorsHeadersObject
+          })
+        })
+      }
+
       promiseWillStart
         .then(() => this.createGraphQLServerOptions(event, context))
         .then((options) => {
@@ -320,6 +330,7 @@ export class ApolloServer extends ApolloServerBase {
             },
             (error: HttpQueryError) => {
               if (error.name !== 'HttpQueryError') return callback(error)
+
               callback(null, {
                 body: error.message,
                 status: `${error.statusCode}`,
