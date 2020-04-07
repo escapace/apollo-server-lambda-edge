@@ -47,13 +47,13 @@ const lens = (
 }
 
 export const createLoggerPlugin = (
-  options: CreateLoggerPluginOptions
+  options?: CreateLoggerPluginOptions
 ): ApolloServerPlugin => {
   // const opts: LensOptions = {
   //   ...options
   // }
-  const logger = options.logger !== undefined ? options.logger : createLogger()
-  const logResponseErrors = options.logResponseErrors ?? false
+  const logger = options?.logger !== undefined ? options.logger : createLogger()
+  const logResponseErrors = options?.logResponseErrors ?? false
 
   return {
     requestDidStart() {
