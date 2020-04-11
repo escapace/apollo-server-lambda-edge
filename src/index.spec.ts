@@ -275,9 +275,9 @@ const createLambda = (options?: Config) => {
               config: {
                 distributionDomainName: 'd111111abcdef8.cloudfront.net',
                 distributionId: 'EDFDVBD6EXAMPLE',
-                eventType: 'origin-request'
-                // requestId:
-                //   '4TyzHTaYWb1GX1qTfsHhEqV6HUDd_BzoBZnwfnvQc_1oF26ClkoUSEQ=='
+                eventType: 'origin-request',
+                requestId:
+                  '4TyzHTaYWb1GX1qTfsHhEqV6HUDd_BzoBZnwfnvQc_1oF26ClkoUSEQ=='
               },
               request: {
                 clientIp: '203.0.113.178',

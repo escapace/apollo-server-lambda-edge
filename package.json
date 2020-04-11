@@ -20,7 +20,7 @@
     "@commitlint/cli": "8.3.5",
     "@commitlint/config-conventional": "8.3.4",
     "@ls-lint/ls-lint": "^1.8.0",
-    "@types/aws-lambda": "^8.10.47",
+    "@types/aws-lambda": "^8.10.48",
     "@types/bunyan": "^1.8.6",
     "@types/chai": "4.2.11",
     "@types/lodash": "^4.14.149",
