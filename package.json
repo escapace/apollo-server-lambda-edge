@@ -7,7 +7,7 @@
   "dependencies": {
     "@apollographql/graphql-playground-html": "^1.6.24",
     "apollo-server-caching": "^0.5.1",
-    "apollo-server-core": "^2.11.0",
+    "apollo-server-core": "^2.12.0",
     "apollo-server-env": "^2.4.3",
     "bunyan": "^1.8.12",
     "graphql-tools": "^4.0.7",
