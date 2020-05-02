@@ -28,7 +28,7 @@
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.13.4",
     "@types/sinon": "^9.0.0",
-    "@types/supertest": "^2.0.8",
+    "@types/supertest": "^2.0.9",
     "@typescript-eslint/eslint-plugin": "2.29.0",
     "@typescript-eslint/parser": "2.30.0",
     "apollo-link-persisted-queries": "^0.2.2",
