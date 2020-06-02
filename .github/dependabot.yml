@@ -1,0 +1,17 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    day: saturday
+    time: '07:00'
+    timezone: Asia/Yerevan
+  open-pull-requests-limit: 10
+  assignees:
+  - l5x
+  versioning-strategy: increase
+  commit-message:
+    prefix: fix
+    prefix-development: chore
+    include: scope
