@@ -10,7 +10,7 @@
     "apollo-server-core": "^2.14.2",
     "apollo-server-env": "^2.4.4",
     "bunyan": "^1.8.12",
-    "graphql-tools": "^6.0.8",
+    "graphql-tools": "^6.0.9",
     "lodash": "^4.17.15",
     "lru-cache": "^5.1.1",
     "object-sizeof": "^1.6.0",
