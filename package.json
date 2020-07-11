@@ -11,7 +11,7 @@
     "apollo-server-env": "^2.4.5",
     "bunyan": "^1.8.14",
     "graphql-tools": "^6.0.12",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "lru-cache": "^5.1.1",
     "object-sizeof": "^1.6.1",
     "tslib": "^2.0.0"
