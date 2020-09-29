@@ -11,10 +11,15 @@ updates:
     time: '07:00'
     timezone: GMT
   open-pull-requests-limit: 10
-  assignees:
-  - l5x
   versioning-strategy: increase
   commit-message:
     prefix: fix
     prefix-development: chore
     include: scope
+- package-ecosystem: "github-actions"
+  directory: "/"
+  schedule:
+    interval: weekly
+    day: saturday
+    time: '07:00'
+    timezone: GMT
