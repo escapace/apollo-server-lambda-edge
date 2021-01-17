@@ -6,7 +6,7 @@
   "bugs": "https://github.com/escapace/apollo-server-lambda-edge/issues",
   "dependencies": {
     "@apollographql/graphql-playground-html": "^1.6.26",
-    "apollo-server-caching": "^0.5.2",
+    "apollo-server-caching": "^0.5.3",
     "apollo-server-core": "^2.19.1",
     "apollo-server-env": "^3.0.0",
     "bunyan": "^1.8.15",
