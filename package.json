@@ -8,7 +8,7 @@
     "@apollographql/graphql-playground-html": "^1.6.27",
     "apollo-server-caching": "^0.6.0",
     "apollo-server-core": "^2.23.0",
-    "apollo-server-env": "^3.0.0",
+    "apollo-server-env": "^3.1.0",
     "bunyan": "^1.8.15",
     "graphql": "^15.5.0",
     "graphql-tools": "^7.0.4",
